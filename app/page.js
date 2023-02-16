@@ -1,5 +1,9 @@
+import { fetchAllBlogs } from "./../blogs-data";
+
 export default function Page() {
-  return (
-    <h1 className="text-4xl font-bold">Let's create a demo blog application</h1>
-  );
+  const blogs = fetchAllBlogs();
+
+  console.log(blogs);
+
+  return <h1 className="text-4xl font-bold">We have {blogs.length} blogs</h1>;
 }
