@@ -23,7 +23,7 @@ const BlogCard = (props) => {
       <div className="w-full flex justify-end">
         <Link
           className="px-4 py-2 bg-blue-800 text-white font-medium rounded-md"
-          href={`/blogs/${_id}`}
+          href={`/${_id}`}
         >
           Read More
         </Link>
