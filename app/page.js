@@ -1,9 +1,14 @@
+import BlogCard from "components/Cards/BlogCard";
 import { fetchAllBlogs } from "./../blogs-data";
 
 export default function Page() {
   const blogs = fetchAllBlogs();
 
-  console.log(blogs);
-
-  return <h1 className="text-4xl font-bold">We have {blogs.length} blogs</h1>;
+  return (
+    <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {blogs.map((blog) => (
+        <BlogCard key={blog._id} blog={blog} />
+      ))}
+    </section>
+  );
 }

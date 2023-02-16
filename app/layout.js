@@ -8,7 +8,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <TopNav />
-        <main className="min-h-screen">{children}</main>
+        <main className="min-h-screen container mx-auto px-2 py-12">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
